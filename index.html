@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Page</title>
     <meta name="description" content="Developer Page">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Agregar normalize.css PRIMERO -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Agregar importacion de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Enlace a CSS --> 
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Developer Page</title>
 </head>
 
 <body>
     <header>
-        <h1>Jafet Jimenez <span>Developer</span></h1>
+        <h1 class="titulo">Jafet Jimenez <span>Developer</span></h1>
     </header>
 
-    <nav>
+    <nav class="navegacion-principal">
         <a href="https://www.google.com">Inicio</a>
         <a href="#">Sobre Mí</a>
         <a href="#">Clientes</a>
