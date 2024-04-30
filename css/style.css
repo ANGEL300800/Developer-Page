@@ -19,10 +19,11 @@ html {
 }
 
 body {
-    background-color: white;
     font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 100%);
 }
-/* Tipografia */
+/* Tipografía */
 h1 {
     font-size: 3.8rem;
 }
@@ -41,7 +42,7 @@ h1, h2, h3 {
 
 .titulo span {
     font-size: 2rem;
-    color: yellow;
+    color: black;
 }
 
 .navegacion-principal{
@@ -99,22 +100,22 @@ Tamaños recomendados para media query
     /* ../ es para salir de la carpeta actual, 
     la carpeta img esta afuera de styles.css */
     background-color: no-repeat;
-    /* en imagenes pequeñas suele repetirse 
+    /* en imágenes pequeñas suele repetirse 
     y abarcar el espacio de la pagina */
     background-size: cover;
     /* sirve para cubrir la imagen con todo
     el tamaño */
-    height: 450px; /* alto del elemnto hero */
-    position: relative; /* para manipular la posicion, el padre siempre debe ser relative */
+    height: 450px; /* alto del elemento hero */
+    position: relative; /* para manipular la posición, el padre siempre debe ser relative */
 }
 
 .contenedor-hero {
-    position: absolute; /* para manipular la posicion, el hijo siempre debe ser absolute */
+    position: absolute; /* para manipular la posición, el hijo siempre debe ser absolute */
     background-color: rgba(0, 0, 0, 0.7);
     /* rgba es para darle un color con transparencia */
     width: 100%;
     height: 100%;
-    /*Alinear vertical y horizonalemente */
+    /*Alinear vertical y horizontalmente */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,15 +132,31 @@ Tamaños recomendados para media query
 }
 
 .boton {
-    background-color: var(--primario);
+    background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
-    margin-top: 3rem; /* separacion superior */
+    margin-top: 3rem; /* separación superior */
     font-size: 2rem;
     text-decoration: none; /* quitar subrayado */
-    text-transform: uppercase; /* converir en mayusculas */
+    text-transform: uppercase; /* convertir en mayúsculas */
     font-weight: bold; /* poner en negritas */
     border-radius: 0.5rem; /* redondear bordes */
-    width: 90%; /* ancho del boton */
-    text-align: center; /* centrar texto del boton*/
+    width: 90%; /* ancho del botón */
+    text-align: center; /* centrar texto del botón*/
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto; /* Cambia esto al ancho que desees */
+    }
+}
+
+.sombra{
+    margin-top: 2rem;
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
