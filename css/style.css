@@ -151,7 +151,7 @@ Tamaños recomendados para media query
     }
 }
 
-.sombra{
+.sombra {
     margin-top: 2rem;
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
     -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
@@ -160,3 +160,37 @@ Tamaños recomendados para media query
     padding: 2rem;
     border-radius: 1rem;
 }
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr, 1fr; Alternativa Sencilla */
+        /* grid-template-columns: 33.3% 33.3% 33.3%; Alternativa en porcentajes */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .servicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Ajustar color y negritas del h3 */
+    .servicio h3 {
+        color: var(--secundario);
+        font-weight: normal;
+    }
+    .servicio p {
+        text-align: center;
+        /* Interlineado */
+        line-height: 2;
+    }
+    /* Ajustar tamaño de los iconos */
+    .servicio .iconos {
+        height: 15rem;
+        width: 15rem;
+        background-color: var(--primario);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 50%;
+    }
+}       
